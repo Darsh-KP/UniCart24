@@ -1,0 +1,33 @@
+package app;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
+
+public class Shoprite extends Application {
+    public static Stage currentStage;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        // Set up FXML loader
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/Login.fxml"));
+
+        // Load the fxml
+        AnchorPane root = loader.load();
+
+        // Set the stage when you open the application
+        currentStage = primaryStage;
+        Scene scene = new Scene(root, 1280, 720);
+        currentStage.setScene(scene);
+        currentStage.setResizable(false);
+        currentStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
