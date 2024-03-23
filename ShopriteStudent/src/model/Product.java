@@ -4,33 +4,35 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
     String id;
-    String description;
+    String name;
     String department;
     double price;
     double storeDiscount;
     double loyaltyDiscount;
     double digitalCoupon;
+    String imagePath;
 
     public Product(){
 
     }
 
     public Product(
-            String id, String description, String department,
-            double price, double storeDiscount, double loyaltyDiscount, double digitalCoupon
+            String id, String name, String department,
+            double price, double storeDiscount, double loyaltyDiscount, double digitalCoupon,
     ) {
         this.id = id;
-        this.description = description;
+        this.name = name;
         this.department = department;
         this.price = price;
         this.storeDiscount = storeDiscount;
         this.loyaltyDiscount = loyaltyDiscount;
         this.digitalCoupon = digitalCoupon;
+        this.imagePath = "";
     }
 
     @Override
     public String toString(){
-        return "\nProducts:\n" + id + "\n" + description + "\n" + price + "\n"
+        return "\nProducts:\n" + id + "\n" + name + "\n" + price + "\n"
                 + storeDiscount + "\n" + loyaltyDiscount + "\n" + digitalCoupon + "\n";
     }
 
@@ -42,12 +44,12 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getName() {
+        return name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDepartment() {
