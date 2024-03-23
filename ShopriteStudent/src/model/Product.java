@@ -2,7 +2,7 @@ package model;
 
 import java.io.Serializable;
 
-public class Product implements Serializable {
+public class Product implements Serializable, Comparable<Product> {
     String id;
     String name;
     String department;
@@ -34,6 +34,13 @@ public class Product implements Serializable {
     public String toString(){
         return "\nProducts:\n" + id + "\n" + name + "\n" + price + "\n"
                 + storeDiscount + "\n" + loyaltyDiscount + "\n" + digitalCoupon + "\n";
+    }
+
+    @Override
+    public int compareTo(Product other) {
+        double discount1 = this.loyaltyDiscount + this.getDigitalCoupon() + this.getStoreDiscount();
+        double discount2 = other.loyaltyDiscount + other.getDigitalCoupon() + other.getStoreDiscount();
+        return Double.compare(discount1, discount2);
     }
 
     public String getId() {

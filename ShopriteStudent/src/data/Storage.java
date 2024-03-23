@@ -8,8 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import model.User;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Storage {
     // List of all the users for the session
@@ -63,7 +62,7 @@ public class Storage {
 
    public static void intializeProductsAPI(){
        try {
-           // API endpoint
+           //API endpoint
            String apiUrl = "https://apimdev.wakefern.com/mockexample/V1/getItemDetails";
 
            // Create URL object
@@ -102,6 +101,34 @@ public class Storage {
            e.printStackTrace();
        }
    }
+
+   public static List<Product> getTopDiscountProducts(){
+       Collections.sort(productList);
+        List<Product> list = new ArrayList<>();
+        int items = (productList.size() > 10) ? (productList.size()-11) : 0;
+        for(int i = productList.size()-1; i >=  items; i--){
+            list.add(productList.get(i));
+        }
+
+        return list;
+   }
+
+    public static List<Product> getBestSellers(){
+        Random rand = new Random();
+        List<Product> list = new ArrayList<>();
+        int count = 0;
+
+        for(Product product: productList){
+            int num = rand.nextInt(100) + 1;
+            if(num < 50){
+                list.add(product);
+                count++;
+            }
+            if(count == 10) break;
+        }
+
+        return list;
+    }
 
     public static List<Product> getProductList() {
         return productList;
