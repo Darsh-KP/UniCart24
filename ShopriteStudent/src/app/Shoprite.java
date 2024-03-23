@@ -7,11 +7,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+import static data.Storage.testTemp;
+
 public class Shoprite extends Application {
     public static Stage currentStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        testTemp();
+
         // Set up FXML loader
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/view/Login.fxml"));
