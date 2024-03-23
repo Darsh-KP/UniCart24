@@ -2,18 +2,18 @@
 
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
 
 <AnchorPane prefHeight="522.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductPageController">
    <children>
       <ScrollPane prefHeight="497.0" prefWidth="664.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
-            <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
+            <GridPane fx:id="grid" cache="true" cacheHint="QUALITY" prefHeight="30.0" prefWidth="43.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
             </GridPane>
          </content>
       </ScrollPane>
