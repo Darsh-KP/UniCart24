@@ -20,9 +20,24 @@
    </VBox>
    <VBox layoutX="665.0" layoutY="-6.0" prefHeight="734.0" prefWidth="621.0" styleClass="right-side-background" stylesheets="@../loginHTML/style.css">
       <children>
+         <HBox prefHeight="100.0" prefWidth="200.0">
+            <padding>
+               <Insets top="50.0" />
+            </padding>
+            <children>
+               <ImageView fitHeight="227.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox.margin>
+                     <Insets left="205.0" />
+                  </HBox.margin>
+                  <image>
+                     <Image url="@../../../../../../Downloads/Vista%20Logos/logo-transparent-png.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
          <HBox prefHeight="115.0" prefWidth="572.0">
             <VBox.margin>
-               <Insets left="40.0" top="100.0" />
+               <Insets left="40.0" top="25.0" />
             </VBox.margin>
             <children>
                <Pane prefHeight="56.0" prefWidth="58.0">
@@ -50,7 +65,7 @@
                </TextField>
             </children>
             <padding>
-               <Insets right="50.0" top="80.0" />
+               <Insets right="50.0" />
             </padding>
          </HBox>
          <HBox prefHeight="115.0" prefWidth="572.0">
@@ -77,12 +92,12 @@
                </TextField>
             </children>
             <padding>
-               <Insets left="40.0" right="50.0" top="50.0" />
+               <Insets left="40.0" right="50.0" />
             </padding>
          </HBox>
          <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="425.0" styleClass="left-side-background" stylesheets="@../loginHTML/style.css" text="Login" textFill="WHITE">
             <VBox.margin>
-               <Insets left="128.0" right="50.0" top="45.0" />
+               <Insets left="128.0" right="50.0" />
             </VBox.margin>
             <font>
                <Font name="Tauri-Regular" size="26.0" />
@@ -96,7 +111,10 @@
          <ImageView fitHeight="372.0" fitWidth="313.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../../../../../../Desktop/College%20Stuff/groceryIcon.png" />
-            </image></ImageView>
+            </image>
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin></ImageView>
       </children>
    </VBox>
 </AnchorPane>
