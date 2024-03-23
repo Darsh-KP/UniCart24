@@ -6,7 +6,7 @@ import java.util.List;
 public class User implements Serializable {
     private String username;
     private String password;
-    private List<CartItem> cart;
-    private List<CartItem> wishlist;
-    private List<CartItem> essentials;
+    private List<ProductWithQuantity> cart;
+    private List<ProductWithQuantity> wishlist;
+    private List<ProductWithQuantity> essentials;
 }
