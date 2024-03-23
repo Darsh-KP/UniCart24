@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import java.text.DecimalFormat;
 import model.Product;
 
 public class ProductCardController {
@@ -19,7 +20,12 @@ public class ProductCardController {
         this.product = product;
         productName.setText(product.getName());
         originalPrice.setText("$" + product.getPrice());
-        yourPrice.setText("$" + (product.getPrice() - product.getStoreDiscount() - product.getLoyaltyDiscount() - product.getDigitalCoupon() ));
+
+        double studentPrice = (product.getPrice() - product.getStoreDiscount() - product.getLoyaltyDiscount() - product.getDigitalCoupon());
+        DecimalFormat df = new DecimalFormat("#.##");
+        String formattedNumber = df.format(studentPrice);
+
+        yourPrice.setText("$" + formattedNumber);
         /*Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
         productImage.setImage(image);*/
     }
