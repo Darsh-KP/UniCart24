@@ -1,5 +1,6 @@
 package app;
 
+import controller.ProductPageController;
 import data.Storage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +16,7 @@ public class Shoprite extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        testTemp();
+        Storage.intializeProductsAPI();
 
         // Load saved data when app is started
         Storage.loadUsers();
@@ -29,10 +30,12 @@ public class Shoprite extends Application {
 
         // Set up FXML loader
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/view/Login.fxml"));
+        loader.setLocation(getClass().getResource("/view/ProductPage.fxml"));
 
         // Load the fxml
         AnchorPane root = loader.load();
+        ProductPageController controller = loader.getController();
+        controller.start();
 
         // Set the stage when you open the application
         currentStage = primaryStage;
