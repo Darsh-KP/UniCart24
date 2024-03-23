@@ -1,5 +1,6 @@
 package app;
 
+import data.Storage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,6 +13,15 @@ public class Shoprite extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        // Load saved data when app is started
+        Storage.loadUsers();
+
+        // Save date when app is closed
+        primaryStage.setOnCloseRequest(windowEvent -> {
+            System.out.print("Closing app. ");
+            Storage.saveUsers();
+        });
+
         // Set up FXML loader
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/view/Login.fxml"));
