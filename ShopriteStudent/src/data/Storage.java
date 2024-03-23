@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Storage {
+    // List of all the users for the session
+    private static List<User> userList;
+
 
     private static List<Product> productList = new ArrayList<>();
 
@@ -114,9 +117,6 @@ public class Storage {
             System.out.println(productList.get(i).toString());
         }
     }
-
-    // List of all the users for the session
-    private static List<User> userList;
 
     // Loads all user data from a file
     public static void loadUsers() {

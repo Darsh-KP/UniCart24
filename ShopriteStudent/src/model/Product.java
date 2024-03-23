@@ -18,7 +18,7 @@ public class Product implements Serializable {
 
     public Product(
             String id, String name, String department,
-            double price, double storeDiscount, double loyaltyDiscount, double digitalCoupon,
+            double price, double storeDiscount, double loyaltyDiscount, double digitalCoupon
     ) {
         this.id = id;
         this.name = name;
