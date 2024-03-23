@@ -30,7 +30,7 @@ public class ProductPageController {
                 ProductCardController productCardController = fxmlLoader.getController();
                 productCardController.setData(product);
 
-                if(column == 6){
+                if(column == 5){
                     column = 0;
                     row++;
                 }
