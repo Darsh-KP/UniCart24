@@ -91,4 +91,12 @@ public class Product implements Serializable {
     public void setDigitalCoupon(double digitalCoupon) {
         this.digitalCoupon = digitalCoupon;
     }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
 }
