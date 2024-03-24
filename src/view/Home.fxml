@@ -28,7 +28,7 @@
                         <Font name="Tauri-Regular" size="22.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#openBudgetPageView" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Budget">
+                  <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Budget">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -36,7 +36,7 @@
                         <Font name="Tauri-Regular" size="22.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#openCartPageView" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="My Cart">
+                  <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="My Cart">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
