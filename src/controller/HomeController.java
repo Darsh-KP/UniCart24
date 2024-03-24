@@ -75,6 +75,9 @@ public class HomeController {
         }catch (IOException e){
             System.out.println("Error!");
         }
+
+        // Show current budget
+        budgetDisplay.setText(String.valueOf(UniCart.currentUser.getBudget()));
     }
 
     // Show the products page with all the products
