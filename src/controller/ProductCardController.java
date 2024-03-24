@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import java.awt.event.ActionEvent;
+import java.io.File;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ResourceBundle;
@@ -20,7 +21,7 @@ public class ProductCardController implements Initializable {
     private Text productName, originalPrice, yourPrice;
 
     @FXML
-    private ImageView productImage;
+    private ImageView productImage, cartIcon;
 
     @FXML
     private ChoiceBox<String> productQuantity;
@@ -58,6 +59,8 @@ public class ProductCardController implements Initializable {
         yourPrice.setText("$" + formattedNumber);
         Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
         productImage.setImage(image);
+
+        cartIcon.setImage(new Image(new File("data/addCart.png").toURI().toString()));
     }
 
 }
