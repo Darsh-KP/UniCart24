@@ -13,6 +13,8 @@ import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 import model.Product;
+import model.ProductWithQuantity;
+import model.User;
 
 public class ProductCardController implements Initializable {
     @FXML
@@ -30,6 +32,7 @@ public class ProductCardController implements Initializable {
     void addToCart() {
         int quantity = Integer.parseInt(productQuantity.getValue());
 
+        
     }
 
     @Override
