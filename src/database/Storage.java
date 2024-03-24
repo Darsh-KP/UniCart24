@@ -1,6 +1,8 @@
 package database;
 
 import model.Product;
+
+import java.awt.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.BufferedReader;
@@ -9,6 +11,7 @@ import java.io.InputStreamReader;
 import model.User;
 import java.io.*;
 import java.util.*;
+import java.util.List;
 
 public class Storage {
     // List of all the users for the session
@@ -69,6 +72,8 @@ public class Storage {
         String digitalString = tokens[5].split(":")[1].replaceAll("\"", "").
                 replaceAll("\\$","").replaceAll("\\s", "");
         double digitalCoupon = (digitalString.length() == 0) ? 0.0 : Double.valueOf(digitalString);
+
+        String imagePath = "";
 
         Product product = new Product(UPC, description, department, price, storeDiscount, loyaltyDiscount, digitalCoupon);
         productList.add(product);
