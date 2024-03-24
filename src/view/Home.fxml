@@ -179,7 +179,7 @@
                                     <ImageView fx:id="recipie1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </HBox>
-                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="299.0" style="-fx-background-color: #FFFFFF;" text="Add Items">
+                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#button1" prefHeight="52.0" prefWidth="299.0" style="-fx-background-color: #FFFFFF;" text="Add Items">
                                  <font>
                                     <Font name="System Bold" size="28.0" />
                                  </font>
@@ -195,7 +195,7 @@
                                     <Font name="System Bold" size="39.0" />
                                  </font>
                               </Text>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="    1. Sugar" wrappingWidth="280.1064147949219">
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="      Sugar" wrappingWidth="280.1064147949219">
                                  <font>
                                     <Font name="System Bold Italic" size="51.0" />
                                  </font>
@@ -205,7 +205,7 @@
                               </Text>
                               <HBox alignment="CENTER" maxHeight="100.0" maxWidth="297.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="297.0">
                                  <children>
-                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="           2. Flour" wrappingWidth="351.6689453125">
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="              Flour" wrappingWidth="351.6689453125">
                                        <font>
                                           <Font name="System Bold" size="51.0" />
                                        </font>
@@ -217,7 +217,7 @@
                               </HBox>
                               <HBox alignment="CENTER" maxHeight="100.0" maxWidth="297.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="297.0">
                                  <children>
-                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="          3. Eggs" wrappingWidth="338.6575927734375">
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="             Eggs" wrappingWidth="338.6575927734375">
                                        <font>
                                           <Font name="System Bold Italic" size="51.0" />
                                        </font>
@@ -227,7 +227,7 @@
                                     </Text>
                                  </children>
                               </HBox>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Coco Powder" wrappingWidth="351.66896057128906">
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="   Cocoa Powder" wrappingWidth="351.66896057128906">
                                  <font>
                                     <Font name="System Bold" size="51.0" />
                                  </font>
@@ -255,7 +255,7 @@
                                     <Insets bottom="20.0" left="70.0" />
                                  </VBox.margin>
                               </HBox>
-                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="52.0" prefWidth="299.0" style="-fx-background-color: #FFFFFF;" text="Add Items">
+                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#button2" prefHeight="52.0" prefWidth="299.0" style="-fx-background-color: #FFFFFF;" text="Add Items">
                                  <font>
                                     <Font name="System Bold" size="28.0" />
                                  </font>
@@ -271,7 +271,7 @@
                                     <Insets left="70.0" />
                                  </VBox.margin>
                               </Text>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="    1. Flour" wrappingWidth="280.1064147949219">
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="        Flour" wrappingWidth="280.1064147949219">
                                  <font>
                                     <Font name="System Bold Italic" size="51.0" />
                                  </font>
@@ -281,7 +281,7 @@
                               </Text>
                               <HBox alignment="CENTER" maxHeight="100.0" maxWidth="297.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="297.0">
                                  <children>
-                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="         2. Cheese" wrappingWidth="351.6689453125">
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="             Cheese" wrappingWidth="351.6689453125">
                                        <font>
                                           <Font name="System Bold" size="51.0" />
                                        </font>
@@ -293,7 +293,7 @@
                               </HBox>
                               <HBox alignment="CENTER" maxHeight="100.0" maxWidth="297.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="297.0">
                                  <children>
-                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="        3. Tomato Sauce" wrappingWidth="460.09698486328125">
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="           Tomato Sauce" wrappingWidth="460.09698486328125">
                                        <font>
                                           <Font name="System Bold Italic" size="51.0" />
                                        </font>
@@ -303,7 +303,7 @@
                                     </Text>
                                  </children>
                               </HBox>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="        4. Eggs" wrappingWidth="351.66896057128906">
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="             Eggs" wrappingWidth="351.66896057128906">
                                  <font>
                                     <Font name="System Bold" size="51.0" />
                                  </font>
