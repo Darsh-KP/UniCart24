@@ -107,6 +107,22 @@ public class HomeController {
         UniCart.currentStage.show();
     }
 
+    public void openBudgetPageView() throws IOException {
+        // Set up an FXML Loader
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("../view/Budget.fxml"));
+
+        //Loading the FXML
+        AnchorPane root = loader.load();
+        BudgetController budget = loader.getController();
+        //budget.start();
+
+        // Show the page and the scene
+        Scene scene = new Scene(root, 1280, 720);
+        UniCart.currentStage.setScene(scene);
+        UniCart.currentStage.show();
+    }
+
     public void logoutUser() throws IOException {
         // Set current user to null
         UniCart.currentUser = null;

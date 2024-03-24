@@ -4,6 +4,7 @@ import database.Storage;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class User implements Serializable {
@@ -13,6 +14,8 @@ public class User implements Serializable {
     private List<ProductWithQuantity> wishlist = new ArrayList<>();
     private List<ProductWithQuantity> essentials = new ArrayList<>();
 
+
+    private HashMap<String,Double> expensesPerDepartment;
 
     public User(String username, String password) throws IllegalArgumentException {
         // Check for empty strings
@@ -57,6 +60,20 @@ public class User implements Serializable {
 
     public void addProductToCart(Product product, int quantity) {
         cart.add(new ProductWithQuantity(product, quantity));
+    }
+
+    public HashMap<String, Double> getExpensesPerDepartment() {
+        return expensesPerDepartment;
+    }
+
+    public void addExpenseDepartment(String department, double expense) {
+        if (expensesPerDepartment.containsKey(department)){
+            Double existingValue = expensesPerDepartment.get(department);
+            expensesPerDepartment.put(department, existingValue + expense);
+        }
+        else {
+            expensesPerDepartment.put(department, expense);
+        }
     }
 
     public ProductWithQuantity findProductWithQuantity(Product product, int quantity){
