@@ -63,6 +63,9 @@
               </rowConstraints>
             </GridPane>
          </content>
+         <padding>
+            <Insets left="85.0" />
+         </padding>
       </ScrollPane>
    </children>
 </AnchorPane>
