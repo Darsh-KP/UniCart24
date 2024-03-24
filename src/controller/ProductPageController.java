@@ -1,6 +1,6 @@
 package controller;
 
-import data.Storage;
+import database.Storage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -9,7 +9,6 @@ import javafx.scene.layout.GridPane;
 import model.Product;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductPageController {

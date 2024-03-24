@@ -1,4 +1,4 @@
-package data;
+package database;
 
 import model.Product;
 import java.net.HttpURLConnection;
@@ -14,10 +14,25 @@ public class Storage {
     // List of all the users for the session
     private static List<User> userList;
 
-
     private static List<Product> productList = new ArrayList<>();
 
     Storage(){}
+
+    public static void initializeDemo() {
+        // Check if user.data already exists
+        File userData = new File("src/database/users.data");
+        if (userData.exists()) return;
+
+        // Create the demo user
+        userList = new ArrayList<>();
+        User demo = new User("stock", "HackRU_S24");
+
+        // Add stuff to demo
+
+        // Add demo to user list
+        addUser(demo);
+        System.out.println("Gello");
+    }
 
     private static String[] cleanItemList(String line){
         String[] tokens = line.split(",");
