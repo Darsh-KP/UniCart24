@@ -28,11 +28,6 @@
                         <Font name="Tauri-Regular" size="22.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Budget">
-                     <font>
-                        <Font name="Tauri-Regular" size="22.0" />
-                     </font>
-                  </Button>
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="MyCart">
                      <font>
                         <Font name="Tauri-Regular" size="22.0" />

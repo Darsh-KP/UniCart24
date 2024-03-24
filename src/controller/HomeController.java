@@ -18,7 +18,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class HomeController {
-    @FXML private Text budgetDisplay;
+    @FXML
+    private Text budgetDisplay;
+
     @FXML
     private GridPane latestDealsDisplay, popularItemsDisplay;
 
@@ -80,6 +82,19 @@ public class HomeController {
         photoController.start();
 
         // Set the stage to the admin panel
+        Scene scene = new Scene(root, 1280, 720);
+        UniCart.currentStage.setScene(scene);
+        UniCart.currentStage.show();
+    }
+
+    public void openCartPageView() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("../view/Cart.fxml"));
+
+        AnchorPane root = loader.load();
+        CartController cartController = loader.getController();
+        cartController.start();
+
         Scene scene = new Scene(root, 1280, 720);
         UniCart.currentStage.setScene(scene);
         UniCart.currentStage.show();
