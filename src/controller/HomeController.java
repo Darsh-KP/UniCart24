@@ -31,6 +31,28 @@ public class HomeController {
     @FXML
     private ImageView recipie2;
 
+    @FXML
+    void button1 ()
+    {
+        Product product1 = Storage.findProduct("corn flour");
+        Product product2 = Storage.findProduct("cocoa powder");
+
+        UniCart.currentUser.addProductToCart(product1, 1);
+        UniCart.currentUser.addProductToCart(product2, 1);
+
+    }
+
+    @FXML
+    void button2 ()
+    {
+        Product product1 = Storage.findProduct("corn flour");
+        Product product2 = Storage.findProduct("Parmesan cheese");
+
+        UniCart.currentUser.addProductToCart(product1, 1);
+        UniCart.curentUser.addProductToCart(product1, 1);
+
+    }
+
     public void start ()
     {
         logoHome.setImage(new Image(new File("data/logo.png").toURI().toString()));
