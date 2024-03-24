@@ -6,11 +6,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import model.Product;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -19,7 +22,13 @@ public class HomeController {
     @FXML
     private GridPane latestDealsDisplay, popularItemsDisplay;
 
-    public void start () {
+    @FXML
+    private ImageView recipie1;
+
+    public void start ()
+    {
+        recipie1.setImage(new Image(new File("data/Brownies.png").toURI().toString()));
+
         List<Product> products = Storage.getTopDiscountProducts();
         int column = 0;
         try {
