@@ -102,6 +102,16 @@ public class Storage {
        }
    }
 
+    public static Product findProduct(String name){
+        for(int i = 0; i < Storage.productList.size(); i++){
+            if(productList.get(i).getName().equals(name)){
+                return productList.get(i);
+            }
+        }
+
+        return null;
+    }
+
    public static List<Product> getTopDiscountProducts(){
        Collections.sort(productList);
         List<Product> list = new ArrayList<>();

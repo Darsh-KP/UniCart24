@@ -1,5 +1,7 @@
 package controller;
 
+import app.Shoprite;
+import data.Storage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -31,8 +33,8 @@ public class ProductCardController implements Initializable {
     @FXML
     void addToCart() {
         int quantity = Integer.parseInt(productQuantity.getValue());
-
-        
+        String name = productName.toString();
+        Shoprite.currentUser.addProductToCart(Storage.findProduct(name), quantity);
     }
 
     @Override
@@ -55,7 +57,7 @@ public class ProductCardController implements Initializable {
         String formattedNumber = df.format(studentPrice);
 
         yourPrice.setText("$" + formattedNumber);
-        /*Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
-        productImage.setImage(image);*/
+        Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
+        productImage.setImage(image);
     }
 }
