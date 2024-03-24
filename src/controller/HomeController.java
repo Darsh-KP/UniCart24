@@ -27,9 +27,13 @@ public class HomeController {
     @FXML
     private ImageView recipie1;
 
+    @FXML   
+    private ImageView logoHome; 
+
     public void start ()
     {
-        recipie1.setImage(new Image(new File("data/Brownies.png").toURI().toString()));
+        logoHome.setImage(new Image(new File("data/logo.png").toURI().toString()));
+        recipie1.setImage(new Image(new File("data/newBrownies.png").toURI().toString()));
 
         List<Product> products = Storage.getTopDiscountProducts();
         int column = 0;
