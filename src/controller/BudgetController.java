@@ -12,6 +12,8 @@ import javafx.scene.chart.PieChart;
 import model.Product;
 
 import java.io.IOException;
+import java.security.Key;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -22,8 +24,12 @@ public class BudgetController {
     @FXML private Text expensesLabel;
 
     @FXML private PieChart pieChart;
+
+    private HashMap<String,Double> expenseRecord;
+
     public void start() {
         List<Product> products = Storage.getTopDiscountProducts();
+        
         int column = 0;
         try {
             for (Product product : products) {
