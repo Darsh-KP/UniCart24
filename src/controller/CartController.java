@@ -26,6 +26,8 @@ public class CartController {
     }
 
     public void start(){
+
+
         updateCartView();
     }
 
