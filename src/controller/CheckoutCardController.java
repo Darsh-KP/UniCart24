@@ -14,6 +14,7 @@ import model.Product;
 import model.ProductWithQuantity;
 import model.User;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
@@ -48,7 +49,8 @@ public class CheckoutCardController {
         originalPrice.setText("$" + formattedNumber);
 
         yourQuantity.setText(String.valueOf(productWithQuantity.getQuantity()));
-        /*Image image = new Image(getClass().getResourceAsStream(productWithQuantity.getItem().getImagePath()));
-        productImage.setImage(image);*/
+        if(!productWithQuantity.getItem().getImagePath().equals("")) {
+            productImage.setImage(new Image(new File(productWithQuantity.getItem().getImagePath()).toURI().toString()));
+        }
     }
 }

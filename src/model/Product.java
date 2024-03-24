@@ -1,5 +1,6 @@
 package model;
 
+import java.io.File;
 import java.io.Serializable;
 
 public class Product implements Serializable, Comparable<Product> {
@@ -27,7 +28,38 @@ public class Product implements Serializable, Comparable<Product> {
         this.storeDiscount = storeDiscount;
         this.loyaltyDiscount = loyaltyDiscount;
         this.digitalCoupon = digitalCoupon;
-        this.imagePath = "";
+
+        String imagePath1 = "data/productImages/" + name + ".png";
+        String imagePath2 = "data/productImages/" + name + ".jpeg";
+        File file1 = new File(imagePath1);
+        File file2 = new File(imagePath2);
+        if(file1.exists()) {
+            this.imagePath = imagePath1;
+        }else if(file2.exists()){
+            this.imagePath = imagePath2;
+        }else{
+            this.imagePath = "";
+        }
+    }
+
+    public Product(
+            String id, String name, String department,
+            double price, double storeDiscount, double loyaltyDiscount, double digitalCoupon, String imagePath
+    ) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.price = price;
+        this.storeDiscount = storeDiscount;
+        this.loyaltyDiscount = loyaltyDiscount;
+        this.digitalCoupon = digitalCoupon;
+
+        File file = new File(imagePath);
+        if(file.exists()) {
+            this.imagePath = imagePath;
+        }else{
+            this.imagePath = "";
+        }
     }
 
     @Override

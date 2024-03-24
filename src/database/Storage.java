@@ -73,7 +73,7 @@ public class Storage {
                 replaceAll("\\$","").replaceAll("\\s", "");
         double digitalCoupon = (digitalString.length() == 0) ? 0.0 : Double.valueOf(digitalString);
 
-        String imagePath = "";
+        //String imagePath = "data/productImages/" + description + ".png";
 
         Product product = new Product(UPC, description, department, price, storeDiscount, loyaltyDiscount, digitalCoupon);
         productList.add(product);
