@@ -32,8 +32,6 @@ public class CheckoutCardController {
         Product product = Storage.findProduct(name);
         int quantity = Integer.parseInt(yourQuantity.getText());
         UniCart.currentUser.removeProductFromCart(UniCart.currentUser.findProductWithQuantity(product,quantity));
-
-
     }
 
     public void setData(ProductWithQuantity productWithQuantity){
@@ -43,8 +41,9 @@ public class CheckoutCardController {
         double studentPrice = (productWithQuantity.getQuantity())*(productWithQuantity.getItem().getPrice()
                 - productWithQuantity.getItem().getStoreDiscount() - productWithQuantity.getItem().getLoyaltyDiscount()
                 - productWithQuantity.getItem().getDigitalCoupon());
+        double correctValue = (studentPrice > 0.0) ? studentPrice : ((productWithQuantity.getQuantity()) * 0.01);
         DecimalFormat df = new DecimalFormat("#.##");
-        String formattedNumber = df.format(studentPrice);
+        String formattedNumber = df.format(correctValue);
 
         originalPrice.setText("$" + formattedNumber);
 
