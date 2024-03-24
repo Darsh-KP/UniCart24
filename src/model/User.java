@@ -10,8 +10,6 @@ public class User implements Serializable {
     private List<ProductWithQuantity> wishlist;
     private List<ProductWithQuantity> essentials;
 
-
-
     public List<ProductWithQuantity> getCart() {
         return cart;
     }
