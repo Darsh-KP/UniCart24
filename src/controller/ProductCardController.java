@@ -8,7 +8,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-
 import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.text.DecimalFormat;
@@ -52,8 +51,9 @@ public class ProductCardController implements Initializable {
         originalPrice.setText("$" + product.getPrice());
 
         double studentPrice = (product.getPrice() - product.getStoreDiscount() - product.getLoyaltyDiscount() - product.getDigitalCoupon());
+        String formattedNumber = "0.01";
         DecimalFormat df = new DecimalFormat("#.##");
-        String formattedNumber = df.format(studentPrice);
+        if(studentPrice > 0.0) formattedNumber = df.format(studentPrice);
 
         yourPrice.setText("$" + formattedNumber);
         Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
