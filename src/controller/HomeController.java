@@ -138,7 +138,6 @@ public class HomeController {
 
         //Loading the FXML
         AnchorPane root = loader.load();
-        BudgetController budget = loader.getController();
 
         // Show the page and the scene
         Scene scene = new Scene(root, 1280, 720);
