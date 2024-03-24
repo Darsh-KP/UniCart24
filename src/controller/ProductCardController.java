@@ -30,10 +30,6 @@ public class ProductCardController implements Initializable {
     void addToCart() {
         int quantity = Integer.parseInt(productQuantity.getValue());
 
-        //delete this later
-        if(quantity == 0){
-
-        }
     }
 
     @Override
