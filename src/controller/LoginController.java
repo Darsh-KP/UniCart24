@@ -4,30 +4,25 @@ import app.Shoprite;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
-/**
- * Class responsible for logging in user and managing the login view.
- */
+
 public class LoginController {
     @FXML
-    TextField usernameInputField;
-    @FXML
-    Button loginButton;
-    @FXML
-    Text loginErrorMessage;
+    private ImageView iconDisplay, logoDisplay, userIcon, passIcon;
 
-    /**
-     * Logs in the appropriate user. Decides whether to load admin or non-admin view.
-     *
-     * @throws IOException
-     */
+    public void start() {
+        iconDisplay.setImage(new Image(new File("data/GroceryIcon.png").toURI().toString()));
+        logoDisplay.setImage(new Image(new File("data/logo.png").toURI().toString()));
+        userIcon.setImage(new Image(new File("data/profileIcon.png").toURI().toString()));
+        passIcon.setImage(new Image(new File("data/passwordicon.png").toURI().toString()));
+    }
+
     public void loginAttempt() throws IOException {
         // Set up FXML loader
         FXMLLoader loader = new FXMLLoader();
