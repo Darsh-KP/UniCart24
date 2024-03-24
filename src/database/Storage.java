@@ -118,7 +118,7 @@ public class Storage {
 
     public static Product findProduct(String name){
         for(int i = 0; i < Storage.productList.size(); i++){
-            if(productList.get(i).getName().equals(name)){
+            if(productList.get(i).getName().trim().equals(name.trim())){
                 return productList.get(i);
             }
         }

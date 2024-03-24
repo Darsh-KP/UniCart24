@@ -11,6 +11,10 @@
     -fx-border-width: 1.5;
 }
 
-.separator(
+.separator{
     -fx-background-color: #F1E6E4;
+}
+
+.welcome{
+    -fx-background-color: #4E96C4;
 }

@@ -10,9 +10,10 @@ import java.util.List;
 public class User implements Serializable {
     private final String username;
     private final String password;
-    private List<ProductWithQuantity> cart;
-    private List<ProductWithQuantity> wishlist;
-    private List<ProductWithQuantity> essentials;
+    private List<ProductWithQuantity> cart = new ArrayList<>();
+    private List<ProductWithQuantity> wishlist = new ArrayList<>();
+    private List<ProductWithQuantity> essentials = new ArrayList<>();
+
 
     private HashMap<String,Double> expensesPerDepartment;
 
@@ -52,6 +53,11 @@ public class User implements Serializable {
         return cart;
     }
 
+    public void emptyCart(){
+        cart = new ArrayList<>();
+    }
+
+
     public void addProductToCart(Product product, int quantity) {
         cart.add(new ProductWithQuantity(product, quantity));
     }
@@ -68,5 +74,18 @@ public class User implements Serializable {
         else {
             expensesPerDepartment.put(department, expense);
         }
+    }
+
+    public ProductWithQuantity findProductWithQuantity(Product product, int quantity){
+        for(int i = 0; i < cart.size(); i++){
+            if(cart.get(i).getItem().getName().equals(product.getName()) && cart.get(i).getQuantity() == quantity){
+                return cart.get(i);
+            }
+        }
+        return null;
+    }
+
+    public void removeProductFromCart(ProductWithQuantity productWithQuantity){
+        cart.remove(productWithQuantity);
     }
 }
