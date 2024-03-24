@@ -1,5 +1,6 @@
 package app;
 
+import controller.LoginController;
 import controller.ProductPageController;
 import data.Storage;
 import javafx.application.Application;
@@ -36,6 +37,8 @@ public class Shoprite extends Application {
 
         // Load the fxml
         AnchorPane root = loader.load();
+        LoginController controller = loader.getController();
+        controller.start();
 
         // Set the stage when you open the application
         currentStage = primaryStage;
