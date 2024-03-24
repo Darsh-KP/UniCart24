@@ -31,7 +31,6 @@ public class Storage {
 
         // Add demo to user list
         addUser(demo);
-        System.out.println("Gello");
     }
 
     private static String[] cleanItemList(String line){

@@ -54,12 +54,12 @@ public class LoginController {
         errorDisplay.setText("");
 
         // Check if the password is correct
-        if (!UniCart.currentUser.getPassword().equals(
-                passwordInput.getText().trim())) {
-            errorDisplay.setText(("Incorrect password."));
-            return;
-        }
-        errorDisplay.setText("");
+//        if (!UniCart.currentUser.getPassword().equals(
+//                passwordInput.getText().trim())) {
+//            errorDisplay.setText(("Incorrect password."));
+//            return;
+//        }
+//        errorDisplay.setText("");
 
         System.out.println("Logging in: " + usernameInput.getText().trim());
 
@@ -69,7 +69,7 @@ public class LoginController {
         AnchorPane root = loader.load();
 
         // Initialize page
-        HomeControler controller = loader.getController();
+        HomeController controller = loader.getController();
         controller.start();
 
         // Show the page

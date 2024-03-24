@@ -1,5 +1,7 @@
 package model;
 
+import database.Storage;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +13,17 @@ public class User implements Serializable {
     private List<ProductWithQuantity> wishlist;
     private List<ProductWithQuantity> essentials;
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public User(String username, String password) throws IllegalArgumentException {
+        // Check for empty strings
+        if (username.isEmpty() || password.isEmpty()) throw new IllegalArgumentException("Cannot have empty credentials.");
+
+        // Check if user already exists
+        for (User user : Storage.getUserList()) {
+            if (user.getUsername().equals(username)) throw new IllegalArgumentException("User already exists.");
+        }
+
+        this.username = username.trim();
+        this.password = password.trim();
         cart = new ArrayList<>();
         wishlist = new ArrayList<>();
         essentials = new ArrayList<>();

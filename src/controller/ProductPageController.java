@@ -18,7 +18,7 @@ public class ProductPageController {
     public void start(){
         List<Product> products = Storage.getProductList();
         int column = 0;
-        int row = 0;
+        int row = 1;
         try {
             for (Product product : products) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
