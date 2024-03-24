@@ -24,9 +24,8 @@ public class HomeController {
     @FXML
     private GridPane latestDealsDisplay, popularItemsDisplay;
 
-    @FXML
+    @FXML   
     private ImageView recipie1;
-
     @FXML   
     private ImageView logoHome;
     @FXML
