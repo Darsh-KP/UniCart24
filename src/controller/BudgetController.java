@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.Scene;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.security.Key;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 
 public class BudgetController {
@@ -42,8 +44,24 @@ public class BudgetController {
         catch (IOException e){
             System.out.println("Error!");
         }
+
+        String input = getInput();
     }
 
 
+    public String getInput() {
+        // Show the dialog box
+        TextInputDialog dialog =new TextInputDialog();
+        dialog.setContentText("Value:");
+        dialog.setHeaderText("");
+        dialog.setGraphic(null);
+
+        // Check the mode of the dialog box
+        dialog.setTitle("New Budget");
+
+        // Return the input of the user
+        Optional<String> result = dialog.showAndWait();
+        return result.orElse("").trim();
+    }
 
 }
