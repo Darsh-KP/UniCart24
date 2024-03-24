@@ -32,24 +32,6 @@ public class BudgetController {
     public void start() {
         List<Product> products = Storage.getTopDiscountProducts();
 
-        String input = getInput();
-
-    }
-
-
-    public String getInput() {
-        // Show the dialog box
-        TextInputDialog dialog =new TextInputDialog();
-        dialog.setContentText("Value:");
-        dialog.setHeaderText("");
-        dialog.setGraphic(null);
-
-        // Check the mode of the dialog box
-        dialog.setTitle("New Budget");
-
-        // Return the input of the user
-        Optional<String> result = dialog.showAndWait();
-        return result.orElse("").trim();
     }
 
 }
