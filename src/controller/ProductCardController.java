@@ -21,7 +21,7 @@ public class ProductCardController implements Initializable {
     private Text productName, originalPrice, yourPrice;
 
     @FXML
-    private ImageView productImage;
+    private ImageView productImage, cartIcon;
 
     @FXML
     private ChoiceBox<String> productQuantity;
@@ -57,9 +57,16 @@ public class ProductCardController implements Initializable {
         if(studentPrice > 0.0) formattedNumber = df.format(studentPrice);
 
         yourPrice.setText("$" + formattedNumber);
+
         if(!product.getImagePath().equals("")) {
             productImage.setImage(new Image(new File(product.getImagePath()).toURI().toString()));
         }
+
+        Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
+        productImage.setImage(image);
+
+        cartIcon.setImage(new Image(new File("data/addCart.png").toURI().toString()));
+
     }
 
 }

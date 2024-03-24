@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BudgetController">
    <children>
       <HBox layoutX="249.0" layoutY="-12.0" prefHeight="72.0" prefWidth="1280.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -94,6 +94,11 @@
                   </Label>
                </children>
             </HBox>
+            <Button mnemonicParsing="false" onMouseClicked="#getInput" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Change Budget" textFill="#ffffe0">
+               <font>
+                  <Font name="Tauri-Regular" size="22.0" />
+               </font>
+            </Button>
          </children>
          <effect>
             <DropShadow height="20.0" radius="9.5" width="20.0" />

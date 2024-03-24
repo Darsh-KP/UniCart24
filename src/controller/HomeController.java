@@ -26,14 +26,38 @@ public class HomeController {
 
     @FXML
     private ImageView recipie1;
-
     @FXML   
-    private ImageView logoHome; 
+    private ImageView logoHome;
+    @FXML
+    private ImageView recipie2;
+
+    @FXML
+    void button1 ()
+    {
+        Product product1 = Storage.findProduct("corn flour");
+        Product product2 = Storage.findProduct("cocoa powder");
+
+        UniCart.currentUser.addProductToCart(product1, 1);
+        UniCart.currentUser.addProductToCart(product2, 1);
+
+    }
+
+    @FXML
+    void button2 ()
+    {
+        Product product1 = Storage.findProduct("corn flour");
+        Product product2 = Storage.findProduct("Parmesan cheese");
+
+        UniCart.currentUser.addProductToCart(product1, 1);
+        UniCart.currentUser.addProductToCart(product1, 1);
+
+    }
 
     public void start ()
     {
         logoHome.setImage(new Image(new File("data/logo.png").toURI().toString()));
-        recipie1.setImage(new Image(new File("data/newBrownies.png").toURI().toString()));
+        recipie1.setImage(new Image(new File("data/Brownies.png").toURI().toString()));
+        recipie2.setImage(new Image(new File("data/pizza.png").toURI().toString()));
 
         List<Product> products = Storage.getTopDiscountProducts();
         int column = 0;
@@ -72,6 +96,9 @@ public class HomeController {
         }catch (IOException e){
             System.out.println("Error!");
         }
+
+        // Show current budget
+        budgetDisplay.setText(String.valueOf(UniCart.currentUser.getBudget()));
     }
 
     // Show the products page with all the products
@@ -99,6 +126,20 @@ public class HomeController {
         CartController cartController = loader.getController();
         cartController.start();
 
+        Scene scene = new Scene(root, 1280, 720);
+        UniCart.currentStage.setScene(scene);
+        UniCart.currentStage.show();
+    }
+
+    public void openBudgetPageView() throws IOException {
+        // Set up an FXML Loader
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("../view/Budget.fxml"));
+
+        //Loading the FXML
+        AnchorPane root = loader.load();
+
+        // Show the page and the scene
         Scene scene = new Scene(root, 1280, 720);
         UniCart.currentStage.setScene(scene);
         UniCart.currentStage.show();
