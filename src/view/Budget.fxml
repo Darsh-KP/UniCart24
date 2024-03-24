@@ -94,6 +94,11 @@
                   </Label>
                </children>
             </HBox>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Change Budget" textFill="#ffffe0">
+               <font>
+                  <Font name="Tauri-Regular" size="22.0" />
+               </font>
+            </Button>
          </children>
          <effect>
             <DropShadow height="20.0" radius="9.5" width="20.0" />
