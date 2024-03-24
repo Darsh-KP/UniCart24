@@ -14,6 +14,8 @@ public class ProductCardController {
     @FXML
     private ImageView productImage;
 
+
+
     private Product product;
 
     public void setData(Product product){
