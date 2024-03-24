@@ -4,17 +4,59 @@ import app.UniCart;
 import database.Storage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
+import model.Product;
 
 import java.io.IOException;
+import java.util.List;
 
 public class HomeController {
-
     @FXML private Text budgetDisplay;
+    @FXML
+    private GridPane latestDealsDisplay, popularItemsDisplay;
 
     public void start () {
+        List<Product> products = Storage.getTopDiscountProducts();
+        int column = 0;
+        try {
+            for (Product product : products) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/view/ProductCard.fxml"));
+
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                ProductCardController productCardController = fxmlLoader.getController();
+                productCardController.setData(product);
+
+                latestDealsDisplay.add(anchorPane, column++, 1);
+                GridPane.setMargin(anchorPane,new Insets(10));
+            }
+        }catch (IOException e){
+            System.out.println("Error!");
+        }
+
+        products = Storage.getBestSellers();
+        column = 0;
+        try {
+            for (Product product : products) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/view/ProductCard.fxml"));
+
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                ProductCardController productCardController = fxmlLoader.getController();
+                productCardController.setData(product);
+
+                popularItemsDisplay.add(anchorPane, column++, 1);
+                GridPane.setMargin(anchorPane,new Insets(10));
+            }
+        }catch (IOException e){
+            System.out.println("Error!");
+        }
     }
 
     // Show the products page with all the products
