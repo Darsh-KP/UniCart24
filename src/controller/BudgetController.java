@@ -45,11 +45,11 @@ public class BudgetController {
             System.out.println("Error!");
         }
 
-        String input =getNameInput();
+        String input = getInput();
     }
 
 
-    public String getNameInput() {
+    public String getInput() {
         // Show the dialog box
         TextInputDialog dialog =new TextInputDialog();
         dialog.setContentText("Value:");
