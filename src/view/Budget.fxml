@@ -14,6 +14,49 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <HBox layoutX="249.0" layoutY="-12.0" prefHeight="72.0" prefWidth="1280.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="1000.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Home">
+                     <font>
+                        <Font name="Tauri-Regular" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Products">
+                     <font>
+                        <Font name="Tauri-Regular" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Budget">
+                     <font>
+                        <Font name="Tauri-Regular" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="MyCart">
+                     <font>
+                        <Font name="Tauri-Regular" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="240.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightyellow; -fx-background-radius: 20;" text="Logout">
+                     <font>
+                        <Font name="Tauri-Regular" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
       <HBox alignment="CENTER" layoutX="635.0" layoutY="137.0" prefHeight="341.0" prefWidth="629.0" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="640.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0">
          <children>
             <PieChart fx:id="pieChart" prefHeight="388.0" prefWidth="500.0" title="Expenses Per Deprtment">
@@ -66,27 +109,5 @@
             <ListView prefHeight="310.0" prefWidth="1250.0" style="-fx-background-color: #f1dcad; -fx-background-radius: 30;" />
          </content>
       </ScrollPane>
-      <HBox layoutX="249.0" layoutY="-12.0" prefHeight="72.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="1000.0">
-               <children>
-                  <Button mnemonicParsing="false" text="Home" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="240.0">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-               <children>
-                  <Button mnemonicParsing="false" text="Button" />
-               </children>
-            </HBox>
-         </children>
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-      </HBox>
    </children>
 </AnchorPane>
