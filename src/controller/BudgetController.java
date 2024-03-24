@@ -31,21 +31,9 @@ public class BudgetController {
 
     public void start() {
         List<Product> products = Storage.getTopDiscountProducts();
-        
-        int column = 0;
-        try {
-            for (Product product : products) {
-                FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/view/ProductCard.fxml"));
-
-                AnchorPane anchorPane = fxmlLoader.load();
-            }
-        }
-        catch (IOException e){
-            System.out.println("Error!");
-        }
 
         String input = getInput();
+
     }
 
 
