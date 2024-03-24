@@ -19,14 +19,6 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="1000.0" spacing="20.0">
                <children>
-                  <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Home">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <font>
-                        <Font name="Tauri-Regular" size="22.0" />
-                     </font>
-                  </Button>
                   <Button fx:id="productsPageButton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#openProductPageView" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: lightgreen; -fx-background-radius: 20;" text="Products">
                      <HBox.margin>
                         <Insets />
@@ -132,7 +124,7 @@
                      </content>
                   </ScrollPane>
                   <Line endX="1200.0" endY="-34.0" startY="-34.0" stroke="#dddddd" strokeLineCap="ROUND" strokeWidth="5.0" />
-                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Reccomended Recipies" textAlignment="CENTER" wrappingWidth="1200.0">
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Recipies Of The Week" textAlignment="CENTER" wrappingWidth="1200.0">
                      <font>
                         <Font name="Symbol" size="24.0" />
                      </font>
