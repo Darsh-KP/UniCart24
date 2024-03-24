@@ -57,4 +57,5 @@ public class ProductCardController implements Initializable {
         Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
         productImage.setImage(image);
     }
+
 }
