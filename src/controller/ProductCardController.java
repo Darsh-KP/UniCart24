@@ -29,6 +29,11 @@ public class ProductCardController implements Initializable {
     @FXML
     void addToCart() {
         int quantity = Integer.parseInt(productQuantity.getValue());
+
+        //delete this later
+        if(quantity == 0){
+
+        }
     }
 
     @Override
