@@ -32,6 +32,9 @@ public class User implements Serializable {
         cart = new ArrayList<>();
         wishlist = new ArrayList<>();
         essentials = new ArrayList<>();
+
+        expensesPerDepartment = new HashMap<String, Double>();
+        budget = 250.00;
     }
 
     public String getUsername() {

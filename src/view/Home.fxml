@@ -87,7 +87,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="85.0" prefWidth="727.0" style="-fx-padding: 20; -fx-background-color: #e3574d; -fx-background-radius: 20;">
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget:">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget: ">
                            <font>
                               <Font name="Tauri-Regular" size="36.0" />
                            </font>
