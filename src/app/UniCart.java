@@ -1,25 +1,28 @@
 package app;
 
 import controller.LoginController;
-import controller.ProductPageController;
-import data.Storage;
+import database.Storage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import model.User;
 
-import static data.Storage.testTemp;
+import java.io.File;
 
-public class Shoprite extends Application {
+public class UniCart extends Application {
     public static Stage currentStage;
     public static User currentUser;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        // Initializes API get all the products
         Storage.intializeProductsAPI();
+
+        // Initialize demo user and its data
+        Storage.initializeDemo();
 
         // Load saved data when app is started
         Storage.loadUsers();
@@ -29,7 +32,6 @@ public class Shoprite extends Application {
             System.out.print("Closing app. ");
             Storage.saveUsers();
         });
-
 
         // Set up FXML loader
         FXMLLoader loader = new FXMLLoader();
@@ -45,6 +47,8 @@ public class Shoprite extends Application {
         Scene scene = new Scene(root, 1280, 720);
         currentStage.setScene(scene);
         currentStage.setResizable(false);
+        currentStage.getIcons().add(new Image(new File("data/logo.png").toURI().toString()));
+        currentStage.setTitle("UniCart");
         currentStage.show();
     }
 

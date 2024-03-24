@@ -1,8 +1,7 @@
 package controller;
 
-import app.Shoprite;
-import data.Storage;
-import javafx.event.ActionEvent;
+import app.UniCart;
+import database.Storage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -15,8 +14,6 @@ import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 import model.Product;
-import model.ProductWithQuantity;
-import model.User;
 
 public class ProductCardController implements Initializable {
     @FXML
@@ -34,7 +31,7 @@ public class ProductCardController implements Initializable {
     void addToCart() {
         int quantity = Integer.parseInt(productQuantity.getValue());
         String name = productName.toString();
-        Shoprite.currentUser.addProductToCart(Storage.findProduct(name), quantity);
+        UniCart.currentUser.addProductToCart(Storage.findProduct(name), quantity);
     }
 
     @Override

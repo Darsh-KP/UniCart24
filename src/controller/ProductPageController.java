@@ -1,6 +1,6 @@
 package controller;
 
-import data.Storage;
+import database.Storage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -9,7 +9,6 @@ import javafx.scene.layout.GridPane;
 import model.Product;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductPageController {
@@ -19,7 +18,7 @@ public class ProductPageController {
     public void start(){
         List<Product> products = Storage.getProductList();
         int column = 0;
-        int row = 0;
+        int row = 1;
         try {
             for (Product product : products) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
