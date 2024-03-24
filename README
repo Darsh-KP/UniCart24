@@ -1,0 +1,4 @@
+Username: stock
+Password: HackRU_S24
+
+If you would like to reset user data. Delete src/database/users.data file and it will auto-generate a new one on the next run.
