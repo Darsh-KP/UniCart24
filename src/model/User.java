@@ -10,6 +10,7 @@ import java.util.List;
 public class User implements Serializable {
     private final String username;
     private final String password;
+    private double budget;
     private List<ProductWithQuantity> cart = new ArrayList<>();
     private List<ProductWithQuantity> wishlist = new ArrayList<>();
     private List<ProductWithQuantity> essentials = new ArrayList<>();
@@ -87,5 +88,13 @@ public class User implements Serializable {
 
     public void removeProductFromCart(ProductWithQuantity productWithQuantity){
         cart.remove(productWithQuantity);
+    }
+
+    public double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(double budget) {
+        this.budget = budget;
     }
 }

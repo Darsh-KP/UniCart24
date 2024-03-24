@@ -59,6 +59,19 @@ public class ProductPageController {
         UniCart.currentStage.show();
     }
 
+    public void openCartPageView() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("../view/Cart.fxml"));
+
+        AnchorPane root = loader.load();
+        CartController cartController = loader.getController();
+        cartController.start();
+
+        Scene scene = new Scene(root, 1280, 720);
+        UniCart.currentStage.setScene(scene);
+        UniCart.currentStage.show();
+    }
+
     public void logoutUser() throws IOException {
         // Set current user to null
         UniCart.currentUser = null;
