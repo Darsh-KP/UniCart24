@@ -6,13 +6,14 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar layoutX="457.0" layoutY="14.0" prefHeight="39.0" prefWidth="382.0" AnchorPane.bottomAnchor="667.0" AnchorPane.leftAnchor="457.0" AnchorPane.rightAnchor="441.0" AnchorPane.topAnchor="14.0">
+      <MenuBar layoutX="457.0" layoutY="14.0" prefHeight="39.0" prefWidth="382.0" AnchorPane.bottomAnchor="660.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="Budget" />
           <Menu mnemonicParsing="false" text="Essentials " />
@@ -41,14 +42,17 @@
          </effect>
       </MenuBar>
       <Line endX="1005.0" endY="-34.0" layoutX="283.0" layoutY="166.0" startX="-290.5" startY="-34.0" />
-      <Text layoutX="628.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget:" />
+      <Text layoutX="584.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget:">
+         <font>
+            <Font name="Tauri-Regular" size="36.0" />
+         </font></Text>
       <Line endX="1005.0" endY="-34.0" layoutX="281.0" layoutY="291.0" startX="-290.5" startY="-34.0" />
       <Text layoutX="603.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Latest Deals" />
       <Line endX="1005.0" endY="-34.0" layoutX="288.0" layoutY="410.0" startX="-290.5" startY="-34.0" />
       <Text layoutX="607.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Popular Items" />
       <Line endX="1005.0" endY="-34.0" layoutX="292.0" layoutY="531.0" startX="-290.5" startY="-34.0" />
-    <AnchorPane layoutX="841.0" layoutY="369.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
       <Text layoutX="584.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reccomended Recipies" wrappingWidth="130.49307751904462" />
       <Text layoutX="637.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0" />
+      <VBox layoutX="590.0" layoutY="104.0" prefHeight="200.0" prefWidth="100.0" />
    </children>
 </AnchorPane>
