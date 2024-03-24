@@ -62,9 +62,6 @@ public class ProductCardController implements Initializable {
             productImage.setImage(new Image(new File(product.getImagePath()).toURI().toString()));
         }
 
-        Image image = new Image(getClass().getResourceAsStream(product.getImagePath()));
-        productImage.setImage(image);
-
         cartIcon.setImage(new Image(new File("data/addCart.png").toURI().toString()));
 
     }
