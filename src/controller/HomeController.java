@@ -49,7 +49,7 @@ public class HomeController {
         Product product2 = Storage.findProduct("Parmesan cheese");
 
         UniCart.currentUser.addProductToCart(product1, 1);
-        UniCart.curentUser.addProductToCart(product1, 1);
+        UniCart.currentUser.addProductToCart(product1, 1);
 
     }
 
