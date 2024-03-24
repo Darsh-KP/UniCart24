@@ -94,7 +94,7 @@
                   </Label>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" onMouseClicked="#getInput" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Change Budget" textFill="#ffffe0">
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Change Budget" textFill="#ffffe0">
                <font>
                   <Font name="Tauri-Regular" size="22.0" />
                </font>
