@@ -40,7 +40,7 @@
       </MenuBar>
       <HBox alignment="CENTER" layoutX="635.0" layoutY="137.0" prefHeight="341.0" prefWidth="629.0" style="-fx-background-color: #f1dcad; -fx-background-radius: 10;" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="640.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
          <children>
-            <PieChart prefHeight="388.0" prefWidth="500.0" style="-fx-background-color: #f1dcad;" title="Expenses Per Deprtment">
+            <PieChart fx:id="pieChart" prefHeight="388.0" prefWidth="500.0" style="-fx-background-color: #f1dcad;" title="Expenses Per Deprtment">
                <HBox.margin>
                   <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                </HBox.margin>
@@ -62,7 +62,7 @@
                         <Insets />
                      </HBox.margin>
                   </Label>
-                  <Label text="Label">
+                  <Label fx:id="budgetLabel" text="Label">
                      <font>
                         <Font name="Tauri-Regular" size="36.0" />
                      </font>
@@ -71,12 +71,12 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #e3574d;">
                <children>
-                  <Label alignment="CENTER" text="Expenses Last Week:" textFill="WHITE">
+                  <Label alignment="CENTER" text="Expenses:" textFill="WHITE">
                      <font>
                         <Font name="Tauri-Regular" size="36.0" />
                      </font>
                   </Label>
-                  <Label text="Label">
+                  <Label fx:id="expensesLabel" text="Label">
                      <font>
                         <Font name="Tauri-Regular" size="36.0" />
                      </font>
