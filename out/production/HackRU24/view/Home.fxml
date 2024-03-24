@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -41,18 +42,35 @@
             <Bloom threshold="1.0" />
          </effect>
       </MenuBar>
-      <Line endX="1005.0" endY="-34.0" layoutX="283.0" layoutY="166.0" startX="-290.5" startY="-34.0" />
-      <Text layoutX="584.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget:">
-         <font>
-            <Font name="Tauri-Regular" size="36.0" />
-         </font></Text>
       <Line endX="1005.0" endY="-34.0" layoutX="281.0" layoutY="291.0" startX="-290.5" startY="-34.0" />
       <Text layoutX="603.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Latest Deals" />
       <Line endX="1005.0" endY="-34.0" layoutX="288.0" layoutY="410.0" startX="-290.5" startY="-34.0" />
       <Text layoutX="607.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Popular Items" />
       <Line endX="1005.0" endY="-34.0" layoutX="292.0" layoutY="531.0" startX="-290.5" startY="-34.0" />
       <Text layoutX="584.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reccomended Recipies" wrappingWidth="130.49307751904462" />
-      <Text layoutX="637.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0" />
-      <VBox layoutX="590.0" layoutY="104.0" prefHeight="200.0" prefWidth="100.0" />
+      <HBox alignment="CENTER" layoutX="666.0" layoutY="83.0" prefHeight="154.0" prefWidth="600.0" style="-fx-padding: 20; -fx-background-color: #e3574d; -fx-background-radius: 20;" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="660.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget:">
+               <font>
+                  <Font name="Tauri-Regular" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="\\$0">
+               <font>
+                  <Font name="Tauri-Regular" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="676.0" layoutY="93.0" prefHeight="154.0" prefWidth="600.0" style="-fx-padding: 20; -fx-background-color: #f1dcad; -fx-background-radius: 20;" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="660.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Label prefHeight="143.0" prefWidth="560.0" text="&quot;Shopping, great taste since 1972!&quot;">
+               <font>
+                  <Font name="Tauri-Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Line endX="-14.499709129333496" endY="-81.70710754394531" layoutX="649.0" layoutY="316.0" startX="-14.5" startY="-240.0" strokeLineJoin="ROUND" AnchorPane.bottomAnchor="490.0" AnchorPane.leftAnchor="640.0" AnchorPane.rightAnchor="640.0" AnchorPane.topAnchor="75.0" />
    </children>
 </AnchorPane>
