@@ -34,7 +34,7 @@ public class HomeController {
     public void start ()
     {
         logoHome.setImage(new Image(new File("data/logo.png").toURI().toString()));
-        recipie1.setImage(new Image(new File("data/newBrownies.png").toURI().toString()));
+        recipie1.setImage(new Image(new File("data/Brownies.png").toURI().toString()));
         recipie2.setImage(new Image(new File("data/pizza.png").toURI().toString()));
 
         List<Product> products = Storage.getTopDiscountProducts();
