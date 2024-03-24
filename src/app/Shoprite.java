@@ -30,12 +30,10 @@ public class Shoprite extends Application {
 
         // Set up FXML loader
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/view/ProductPage.fxml"));
+        loader.setLocation(getClass().getResource("/view/Login.fxml"));
 
         // Load the fxml
         AnchorPane root = loader.load();
-        ProductPageController controller = loader.getController();
-        controller.start();
 
         // Set the stage when you open the application
         currentStage = primaryStage;

@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -28,6 +29,17 @@ public class LoginController {
      * @throws IOException
      */
     public void loginAttempt() throws IOException {
+        // Set up FXML loader
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/Home.fxml"));
+        AnchorPane root = loader.load();
 
+        // Initialize page
+        //HomeController controller = loader.getController();
+        //controller.start();
+
+        // Show the page
+        Shoprite.currentStage.setScene(new Scene(root, 1280, 720));
+        Shoprite.currentStage.show();
     }
 }
